@@ -21,4 +21,15 @@
 body {
   background: var(--gray-900);
   color: var(--gray-300);
+  -webkit-font-smoothing:antialiased;
+
+}
+
+body, 
+input,
+button,
+textarea {
+ font-family: 'Roboto', sans-serif;
+ font-weight: 400;
+ font-size: 1rem;
 }
