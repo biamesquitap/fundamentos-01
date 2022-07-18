@@ -28,10 +28,6 @@
   margin-top: 1rem;
 }
 
-.content header{ 
-
-}
-
 .post > header {
   display: flex;
   aling-items: center;
@@ -89,15 +85,15 @@
 
 .commentForm textarea {
   width: 100%;
-  background: var(--gray-900);
   color: var(--gray-100);
-  resize: none;
+  background: var(--gray-900);
   height: 6rem;
-  paddind: 1rem;
-  line-height: 1.4rem;
-  margin-top: 1rem;
   border: 0;
   border-radius: 8px;
+  padding: 1rem;
+  resize: none;
+  margin-top: 1rem;
+  line-height: 1.4;
 }
 
 .commentForm footer {
@@ -110,11 +106,11 @@
   max-height: none;
 }
 
-.commentForm button[type=submit]  {
+.commentForm button[type="submit"] {
   padding: 1rem 1.5rem;
   margin-top: 1rem;
-  border: 0;
   border-radius: 8px;
+  border: 0;
   background: var(--green-500);
   color: var(--white);
   font-weight: bold;
