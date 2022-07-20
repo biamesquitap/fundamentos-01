@@ -73,6 +73,8 @@ export function Post({ author, publishedAt, content }) {
         placeholder="Deixe um comentario"
         value={newCommentText}
         onChange={handleNewCommentChange}
+        onInvalid
+        required
         />
 
       <footer>
@@ -86,7 +88,7 @@ export function Post({ author, publishedAt, content }) {
           <Comment 
             key={comment}
             content={comment}
-            onDeleteComment = {deleteComment} 
+            onDeleteComment = {deleteComment}
           />)
         })}
       </div>
