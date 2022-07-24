@@ -1,17 +1,14 @@
-import { format, formatDistanceToNow } from 'date-fns'
-import ptBR from 'date-fns/locale/pt-BR'
-import { useState } from 'react';
-
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
+import { format, formatDistanceToNow } from 'date-fns'
+import { useState } from 'react';
 
+import ptBR from 'date-fns/locale/pt-BR'
 import styles from "./Post.module.css";
 
 export function Post({ author, publishedAt, content }) {
-  const [comments, setComments] = useState( [
-    'Post muito bacana hein!? '
-  ])
-  const [newCommentText, setNewCommentText] = useState('')
+  const [comments, setComments] = useState(["Post top! Que evolução!"]);
+  const [newCommentText, setNewCommentText] = useState('');
 
   const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'as' HH:mm'h'", {
     locale: ptBR,
@@ -29,12 +26,21 @@ export function Post({ author, publishedAt, content }) {
   }
 
   function handleNewCommentChange(){
+<<<<<<< HEAD
     event.target.setCustomValidity('');
     setNewCommentText(event.target.value)
   }
 
   function handleNewCommentInvalid () {
     event.target.setCustomValidity('Este campo e obrigatorio')
+=======
+    event.target.setCustomValidity("");
+    setNewCommentText(event.target.value)
+  }
+
+  function handleNewCommentInvalid() {
+    event.target.setCustomValidity("Este campo é obrigatório!");
+>>>>>>> cde767d55169ad311c8555ec5fe0a6b2ba47387b
   }
 
   function deleteComment(commentToDelete) {
@@ -42,7 +48,11 @@ export function Post({ author, publishedAt, content }) {
     setComments(commentListAfterDelete);
   }
 
+<<<<<<< HEAD
   const isTextareaEmpty = newCommentText.length == 0;
+=======
+  const commentTextFieldEmpty = newCommentText.length === 0;
+>>>>>>> cde767d55169ad311c8555ec5fe0a6b2ba47387b
 
   return (
     <article className={styles.post}>
@@ -75,6 +85,7 @@ export function Post({ author, publishedAt, content }) {
         className={styles.commentForm}>
           <strong>Deixe seu feedback</strong>
 
+<<<<<<< HEAD
           <textarea
             name = 'comment'
             placeholder="Deixe um comentario"
@@ -87,6 +98,25 @@ export function Post({ author, publishedAt, content }) {
         <footer>
           <button type="submit" disabled={isTextareaEmpty}> Publicar </button>
         </footer>
+=======
+        <textarea
+        name = 'comment'
+        placeholder="Deixe um comentario"
+        value={newCommentText}
+        onChange={handleNewCommentChange}
+        onInvalid ={handleNewCommentInvalid}
+        required
+        />
+
+      <footer>
+        <button 
+          type="submit"
+          disabled= {commentTextFieldEmpty}
+        > 
+          Publicar 
+        </button>
+      </footer>
+>>>>>>> cde767d55169ad311c8555ec5fe0a6b2ba47387b
       </form>
 
       <div className={styles.commentList}>

@@ -5,15 +5,25 @@ import { Avatar } from "./Avatar";
 import styles from "./Comment.module.css";
 
 export function Comment ({content, onDeleteComment}) {
+<<<<<<< HEAD
+=======
+  
+>>>>>>> cde767d55169ad311c8555ec5fe0a6b2ba47387b
   const [likeCount, setLikeCount] = useState(0);
 
   function handleDeleteComment () {
     onDeleteComment(content);
   }
 
+<<<<<<< HEAD
   function handleLikeComment () {
     setLikeCount((state) => {
       return state +1
+=======
+  function handleLikeCount() {
+    setLikeCount((state) => {
+      return state + 1;
+>>>>>>> cde767d55169ad311c8555ec5fe0a6b2ba47387b
     });
   }
 
@@ -47,11 +57,18 @@ export function Comment ({content, onDeleteComment}) {
         </div>
         
         <footer>
+<<<<<<< HEAD
           <button 
             onClick = {(handleLikeComment)}
           >
              <ThumbsUp />
              Aplaudir <span> {likeCount} </span>
+=======
+          <button onClick={handleLikeCount}>
+            <ThumbsUp />
+            Aplaudir 
+            <span> {likeCount} </span>
+>>>>>>> cde767d55169ad311c8555ec5fe0a6b2ba47387b
           </button>
         </footer>
       </div>
